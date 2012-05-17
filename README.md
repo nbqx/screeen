@@ -7,7 +7,7 @@ use osx screencapture command interface in ruby script
 	require  'screeen'
 	Screeen.capture do |f|
 	  open("captured.jpg","w") do |p|
-	    p.write f
+	    p.write File.open(f).read
 	  end
 	end
 

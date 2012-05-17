@@ -10,7 +10,7 @@ module Screeen
     Process.waitpid(pid)
 
     begin
-      open(tmp.path,"r"){|captured|  yield captured.read}
+      yield tmp
     ensure
       tmp.close
     end
